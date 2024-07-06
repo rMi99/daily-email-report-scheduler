@@ -13,7 +13,8 @@ This project automates the sending of daily email reports using a Flask web inte
 ## Prerequisites
 
 - Python 3.12 or higher
-- pip
+- pip install Flask Flask-WTF email_validator schedule
+
 
 ## Setup
 
