@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Daily Email Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule Daily Email Report</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.smtp_server.label }} {{ form.smtp_server(size=32) }}
+            </div>
+            <div>
+                {{ form.smtp_port.label }} {{ form.smtp_port(size=32) }}
+            </div>
+            <div>
+                {{ form.smtp_username.label }} {{ form.smtp_username(size=32) }}
+            </div>
+            <div>
+                {{ form.smtp_password.label }} {{ form.smtp_password(size=32) }}
+            </div>
+            <div>
+                {{ form.to_email.label }} {{ form.to_email(size=32) }}
+            </div>
+            <div>
+                {{ form.subject.label }} {{ form.subject(size=32) }}
+            </div>
+            <div>
+                {{ form.body.label }} {{ form.body(rows=5, cols=32) }}
+            </div>
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+    </div>
+</body>
+</html>
